@@ -1,8 +1,10 @@
 function Atm(b,w){
-    if(w == 100 || w == 200 || w == 500 || w == 2000){
-        console.log("The balance after withdrawl is " + (a = (b - w)));
+    if(w % 100 == 0 && b > 100){
+        console.log("The balance after withdrawl is " + (b - w));
+    }else if(w % 100 != 0){
+        console.log("Please enter the amount in multiple of 100");
     }else{
-        console.log("Invalid amount");
+        console.log("Insufficient balance");
     }
 }
-Atm(1000,280)
+Atm(1000,250)
